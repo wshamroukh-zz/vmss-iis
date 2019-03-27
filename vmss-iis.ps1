@@ -1,4 +1,5 @@
-﻿Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value $($env:computername)
+Add-WindowsFeature Web-Server
+Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value $($env:computername)
 New-Item -ItemType directory -Path "C:\inetpub\wwwroot\sahara"
 New-Item -ItemType directory -Path "C:\inetpub\wwwroot\safari"
 $saharavalue = "Sahara: GW-01-" + $($env:computername)
